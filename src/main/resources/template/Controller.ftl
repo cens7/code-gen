@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("service/${moduleName}/${upperClassName}")
+@RequestMapping("service/${moduleName}/${lowerClassName}")
 public class ${upperClassName}Controller {
 
     @Autowired

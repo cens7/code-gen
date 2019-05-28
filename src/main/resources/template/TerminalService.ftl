@@ -30,7 +30,7 @@ public class ${upperClassName}Service {
     }
 
     public ResponseEntity<List<${upperClassName}F>> list${upperClassName}ByCondition(${upperClassName}F ${lowerClassName}F) {
-        String address = ServiceApplication.${moduleName}.buildHttp("service/${moduleName}/${lowerClassName}/list${upperClassName}ByCondition");
+        String address = ServiceApplication.${moduleName}.buildHttp("service/${moduleName}/${lowerClassName}/list${lowerClassName}ByCondition");
         Map<String, Object> map = BeanUtil.beanToMap(${lowerClassName}F, false, true);
         address = HttpUtil.urlWithForm(address, map, CharsetUtil.CHARSET_UTF_8, false);
         return restTemplate.getForObject(address, ResponseEntity.class);
