@@ -42,7 +42,7 @@ public class ${upperClassName}Service {
     }
 
     public ResponseEntity deleteBy${upperNoFieldName}(String ${lowerNoFieldName}) {
-        String address = ServiceApplication.${moduleName}.buildHttp("service/${moduleName}/${lowerClassName}/delete");
+        String address = ServiceApplication.${moduleName}.buildHttp("service/${moduleName}/${lowerClassName}/deleteBy${lowerNoFieldName}");
         return restTemplate.postForObject(address, ${lowerNoFieldName}, ResponseEntity.class);
     }
 
