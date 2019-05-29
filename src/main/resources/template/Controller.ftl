@@ -6,16 +6,18 @@ import horse.pay.service.${moduleName}.invoker.service.${upperClassName}Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import static horse.pay.service.${moduleName}.entity.api.${upperClassName}Api.*;
+
 import java.util.List;
 
 @RestController
-@RequestMapping("service/${moduleName}/${lowerClassName}")
+@RequestMapping(BaseUrl)
 public class ${upperClassName}Controller {
 
     @Autowired
     private ${upperClassName}Service ${lowerClassName}Service;
 
-    @PostMapping("insert")
+    @PostMapping(Insert)
     public ResponseEntity insert${upperClassName}(@RequestBody ${upperClassName}F ${lowerClassName}F) {
         ResponseEntity re = ${lowerClassName}F.inspect();
         if (re.isFail()) {
@@ -24,7 +26,7 @@ public class ${upperClassName}Controller {
         return ${lowerClassName}Service.insert${upperClassName}(${lowerClassName}F);
     }
 
-    @PostMapping("update")
+    @PostMapping(Update)
     public ResponseEntity update${upperClassName}(@RequestBody ${upperClassName}F ${lowerClassName}F) {
         ResponseEntity re = ${lowerClassName}F.inspect();
         if (re.isFail()) {
@@ -33,22 +35,22 @@ public class ${upperClassName}Controller {
         return ${lowerClassName}Service.update${upperClassName}(${lowerClassName}F);
     }
     
-    @PostMapping("deleteBy${upperNoFieldName}")
+    @PostMapping(DeleteBy${upperNoFieldName})
     public ResponseEntity deleteBy${upperNoFieldName}(@RequestBody String ${lowerNoFieldName}) {
         return ${lowerClassName}Service.deleteBy${upperNoFieldName}(${lowerNoFieldName});
     }
 
-    @GetMapping("list${upperClassName}ByCondition")
+    @GetMapping(List${upperClassName}ByCondition)
     public ResponseEntity list${upperClassName}ByCondition(${upperClassName}F ${lowerClassName}F) {
         return ${lowerClassName}Service.list${upperClassName}ByCondition(${lowerClassName}F);
     }
 
-    @GetMapping("getBy${upperNoFieldName}")
+    @GetMapping(GetBy${upperNoFieldName})
     public ResponseEntity getBy${upperNoFieldName}(String ${lowerNoFieldName}) {
         return ${lowerClassName}Service.getBy${upperNoFieldName}(${lowerNoFieldName});
     }
 
-    @GetMapping("pageByCondition")
+    @GetMapping(PageByCondition)
     public ResponseEntity<List<${upperClassName}F>> pageByCondition(${upperClassName}F ${lowerClassName}F) {
         ResponseEntity re = ${lowerClassName}F.inspect();
         if (re.isFail()) {
