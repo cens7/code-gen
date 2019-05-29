@@ -68,7 +68,11 @@ public class Engine {
 
             StringBuilder sb1 = new StringBuilder();
             StringBuilder sb2 = new StringBuilder();
-            sb1.append(absPath).append("\\").append(entity.getUpperClassName()).append(value.suffix).append(".").append(value.java);
+            if(value.java.equals("xml")){
+                sb1.append(absPath).append("\\").append(entity.getLowerClassName()).append(value.suffix).append(".").append(value.java);
+            }else{
+                sb1.append(absPath).append("\\").append(entity.getUpperClassName()).append(value.suffix).append(".").append(value.java);
+            }
             File file = new File(sb1.toString());
             FileOutputStream fosD = new FileOutputStream(file);
             OutputStreamWriter writer = new OutputStreamWriter(fosD);
