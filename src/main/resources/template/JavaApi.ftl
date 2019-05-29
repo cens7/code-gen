@@ -2,7 +2,7 @@ package horse.pay.service.${moduleName}.entity.api;
 
 public interface ${upperClassName}Api {
 
-    String BaseUrl = "service/${moduleName}/${lowerClassName}";
+    String BaseUrl = "service/${moduleName}/${lowerClassName}/";
 
     String Insert = "insert";
 
