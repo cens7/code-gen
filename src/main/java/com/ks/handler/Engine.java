@@ -95,6 +95,7 @@ public class Engine {
 
         suffix_D("Java", "D", "java"),
         suffix_F("Java", "F", "java"),
+        suffix_Api("Java", "Api", "java"),
         suffix_Mapper("", "Mapper", "java"),
         suffix_MapperXML("MapperXml", "", "xml"),
         suffix_Storage("", "Storage", "java"),
