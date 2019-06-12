@@ -2,6 +2,8 @@ package horse.pay.service.${moduleName}.entity.api;
 
 public interface ${upperClassName}Api {
 
+    String Module = "${upperClassName}";
+
     String BaseUrl = "service/${moduleName}/${lowerClassName}/";
 
     String Insert = "insert";
